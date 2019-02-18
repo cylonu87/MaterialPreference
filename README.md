@@ -38,7 +38,7 @@ repositories {
 }
 ```
 
-From your `preferences.xml`:
+From your [`preferences.xml`](https://github.com/anggrayudi/MaterialPreference/blob/java/sample/src/main/res/xml/preferences.xml):
 
 ```xml
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
@@ -55,7 +55,7 @@ From your `preferences.xml`:
 </PreferenceScreen>
 ```
 
-From your `SettingsFragment`:
+From your [`SettingsFragment`](https://github.com/anggrayudi/MaterialPreference/blob/java/sample/src/main/java/com/anggrayudi/materialpreference/sample/SettingsFragment.java):
 
 ```java
 public class SettingsFragment extends PreferenceFragmentMaterial {
@@ -74,7 +74,7 @@ public class SettingsFragment extends PreferenceFragmentMaterial {
 }
 ```
 
-From your `SettingsActivity`:
+From your [`SettingsActivity`](https://github.com/anggrayudi/MaterialPreference/blob/java/sample/src/main/java/com/anggrayudi/materialpreference/sample/SettingsActivity.java):
 
 ```java
 public class SettingsActivity extends PreferenceActivityMaterial {
@@ -91,8 +91,8 @@ public class SettingsActivity extends PreferenceActivityMaterial {
             mSettingsFragment = SettingsFragment.newInstance(null);
             getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, mSettingsFragment, TAG).commit();
         } else {
-            mSettingsFragment = (SettingsFragment) getSupportFragmentManager().findFragmentByTag(TAG);
-            setTitle(mSettingsFragment.getPreferenceFragmentTitle());
+            // refresh this activity's title
+            onBackStackChanged();
         }
     }
 
