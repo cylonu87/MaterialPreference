@@ -2,6 +2,7 @@ apply plugin: 'com.android.library'
 
 group = 'com.anggrayudi'
 version = "$libVersion"
+archivesBaseName = 'materialpreference-java'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -29,21 +30,18 @@ android {
 }
 
 dependencies {
-    api 'androidx.appcompat:appcompat:1.1.0-alpha01'
+    api 'androidx.appcompat:appcompat:1.1.0-alpha02'
     api 'androidx.cardview:cardview:1.0.0'
     api 'com.google.android.material:material:1.1.0-alpha02'
-    api 'com.wdullaer:materialdatetimepicker:4.1.0'
+    api 'com.wdullaer:materialdatetimepicker:4.1.2'
     api 'com.afollestad.material-dialogs:core:0.9.6.0'
     api 'com.afollestad.material-dialogs:commons:0.9.6.0'
     api 'commons-io:commons-io:2.6'
 }
 
 ext {
-    PUBLISH_GROUP_ID = group
-    PUBLISH_ARTIFACT_ID = 'materialpreference'
-    PUBLISH_VERSION = version
-    siteUrl = 'https://github.com/anggrayudi/MaterialPreference'
-    gitUrl = 'https://github.com/anggrayudi/MaterialPreference.git'
+    packagingMode = 'aar'
+    PUBLISH_ARTIFACT_ID = 'materialpreference-java'
     libsDesc = 'A library designed to replace default preferences on Android framework with something beauty.'
 }
 

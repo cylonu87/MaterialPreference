@@ -1,6 +1,7 @@
 package com.anggrayudi.materialpreference.sample;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 
@@ -9,7 +10,7 @@ import com.anggrayudi.materialpreference.PreferenceFragmentMaterial;
 
 public class SettingsActivity extends PreferenceActivityMaterial {
 
-    private static final String TAG = "SettingsActivity";
+    private static final String TAG = "Settings";
 
     private SettingsFragment mSettingsFragment;
 
@@ -24,8 +25,8 @@ public class SettingsActivity extends PreferenceActivityMaterial {
             mSettingsFragment = SettingsFragment.newInstance(null);
             getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, mSettingsFragment, TAG).commit();
         } else {
-            mSettingsFragment = (SettingsFragment) getSupportFragmentManager().findFragmentByTag(TAG);
-            setTitle(mSettingsFragment.getPreferenceFragmentTitle());
+            // refresh this activity's title
+            onBackStackChanged();
         }
     }
 
@@ -36,14 +37,15 @@ public class SettingsActivity extends PreferenceActivityMaterial {
 
     @Override
     public void onBackStackChanged() {
-        mSettingsFragment = (SettingsFragment) getSupportFragmentManager().findFragmentByTag("Settings");
+        mSettingsFragment = (SettingsFragment) getSupportFragmentManager().findFragmentByTag(TAG);
         setTitle(mSettingsFragment.getPreferenceFragmentTitle());
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
-        menu.findItem(R.id.action_donate).setIntent(new Intent(this, DonationActivity.class));
+        menu.findItem(R.id.action_donate).setIntent(new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TGPGSY66LKUMN&source=url")));
         return super.onCreateOptionsMenu(menu);
     }
 }

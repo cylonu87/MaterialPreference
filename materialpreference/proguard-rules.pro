@@ -33,6 +33,5 @@
 -keep public class com.anggrayudi.materialpreference.EditTextPreference { *; }
 -keep public class com.anggrayudi.materialpreference.IndicatorPreference { *; }
 -keep public class com.anggrayudi.materialpreference.FolderPreference { *; }
--keep public class com.anggrayudi.materialpreference.FilePreference { *; }
 -keep public class com.anggrayudi.materialpreference.TimePreference { *; }
 -keep public class com.anggrayudi.materialpreference.DatePreference { *; }

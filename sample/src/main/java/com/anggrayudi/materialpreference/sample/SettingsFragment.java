@@ -17,8 +17,6 @@ import androidx.core.app.ActivityCompat;
 public class SettingsFragment extends PreferenceFragmentMaterial implements
         SharedPreferences.OnSharedPreferenceChangeListener {
 
-    private static final String TAG = "SettingsFragment";
-
     public static SettingsFragment newInstance(String rootKey) {
         Bundle args = new Bundle();
         args.putString(ARG_PREFERENCE_ROOT, rootKey);
