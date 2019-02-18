@@ -24,15 +24,17 @@ Writing code in Java is slow, and that's why I decided to migrate to Kotlin.
 
 ## Usage
 
+```gradle
+dependencies {
+    implementation 'com.anggrayudi:materialpreference-java:2.2.0'
+}
+```
+
 **Note**: If you encounter error `Failed to resolve com.anggrayudi:materialpreference-java:x.x.x`, then add the following config:
 
 ```gradle
 repositories {
     maven { url 'https://dl.bintray.com/anggrayudi/maven/' }
-}
-
-dependencies {
-    implementation 'com.anggrayudi:materialpreference-java:2.2.0'
 }
 ```
 
