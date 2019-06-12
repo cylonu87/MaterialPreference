@@ -7,10 +7,10 @@ Available from API 17.
 
 ## Screenshots
 
-![Alt text](assets/1.png?raw=true "Material Preference")
-![Alt text](assets/2.png?raw=true "Material Preference")
-![Alt text](assets/3.png?raw=true "DatePreference")
-![Alt text](assets/4.png?raw=true "ListPreference")
+![Alt text](assets/1-generic.png?raw=true "Material Preference")
+![Alt text](assets/2-generic.png?raw=true "Material Preference")
+![Alt text](assets/3-generic.png?raw=true "DatePreference")
+![Alt text](assets/4-generic.png?raw=true "ListPreference")
 
 ## Note
 
