@@ -7,10 +7,12 @@ Available from API 17.
 
 ## Screenshots
 
+<p>
 <img src="assets/1-generic.png?raw=true" alt="Material Preference" width="300">
 <img src="assets/2-generic.png?raw=true" alt="Material Preference" width="300">
 <img src="assets/3-generic.png?raw=true" alt="DatePreference" width="300">
 <img src="assets/4-generic.png?raw=true" alt="ListPreference" width="300">
+</p>
 
 ## Note
 
