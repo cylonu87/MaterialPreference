@@ -7,7 +7,7 @@ Available from API 17.
 
 ## Screenshots
 
-![Alt text](art/1-generic.png?raw=true "Material Preference")
+![Alt text](assets/1-generic.png?raw=true "Material Preference")
 ![Alt text](art/2-generic.png?raw=true "Material Preference")
 ![Alt text](art/3-generic.png?raw=true "DatePreference")
 ![Alt text](art/4-generic.png?raw=true "ListPreference")
