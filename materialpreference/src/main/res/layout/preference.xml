@@ -22,6 +22,7 @@
     android:layout_height="wrap_content"
     android:minHeight="@dimen/preferenceMinHeight"
     android:gravity="center_vertical"
+    android:paddingRight="?android:attr/scrollbarSize"
     android:paddingEnd="?android:attr/scrollbarSize"
     android:background="?android:attr/selectableItemBackground"
     android:focusable="true"
@@ -35,6 +36,7 @@
             android:id="@android:id/icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/preferenceHorizontalMargin"
             android:layout_marginStart="@dimen/preferenceHorizontalMargin"
             app:maxWidth="@dimen/preferenceIconMaxSize"
             app:maxHeight="@dimen/preferenceIconMaxSize"
@@ -44,10 +46,12 @@
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/preferenceHorizontalMargin"
         android:layout_marginStart="@dimen/preferenceHorizontalMargin"
-        android:layout_marginEnd="6dip"
-        android:layout_marginTop="6dip"
-        android:layout_marginBottom="6dip"
+        android:layout_marginRight="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
         android:layout_weight="1">
 
         <TextView android:id="@android:id/title"
@@ -58,7 +62,9 @@
             android:textColor="?android:attr/textColorPrimary"
             android:ellipsize="marquee"
             android:fadingEdge="horizontal"
+            android:layout_toLeftOf="@+id/material_summary"
             android:layout_toStartOf="@+id/material_summary"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             tools:text="Mr. Handsome here" />
 
@@ -66,6 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@android:id/title"
+            android:layout_alignLeft="@android:id/title"
             android:layout_alignStart="@android:id/title"
             android:textAppearance="@style/preferenceSummaryTextAppearance"
             android:textColor="?android:attr/textColorSecondary"
@@ -82,7 +89,9 @@
             android:textSize="15sp"
             android:ellipsize="marquee"
             android:singleLine="true"
+            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
+            android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
             tools:text="This is summary bitch!aasdfsdfsadfsadfsdfasdfasd" />
     </RelativeLayout>
